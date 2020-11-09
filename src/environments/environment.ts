@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  BASE_URL: {
+    "LOG_TRACE" : 'http://service.dns.ciberbank.pe:30002/v1/',
+    "GENERAL" : 'http://service.dns.ciberbank.pe:30003/v1/',
+    "USUARIOS" : 'http://service.dns.ciberbank.pe:30004/v1/',
+    "CUENTAS_BANCARIAS" : 'http://service.dns.ciberbank.pe:30005/v1/'
+  }
 };
 
 /*
