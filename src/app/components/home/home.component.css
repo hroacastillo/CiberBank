@@ -16,10 +16,30 @@
     width: 40%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--colorGris);
+    background-color: rgb(245, 245, 245);
     border-radius: .5rem;
     padding: 1rem 2rem;
     margin-top: 1.5rem;
+}
+
+.balance_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cuenta {
+    color: var(--colorPlaceholder);
+    font-size: .8rem;
+}
+
+.balance_monto {
+    color: var(--colorAzul);
+    font-size: 1.5rem;
+}
+
+.balance_title {
+    font-size: 1.8rem;
 }
 
 @media (min-width: 768px) {
