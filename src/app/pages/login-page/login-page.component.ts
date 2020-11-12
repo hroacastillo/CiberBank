@@ -1,33 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-login-page',
+  templateUrl: './login-page.component.html',
+  styleUrls: ['./login-page.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginPageComponent implements OnInit {
 
-  //loginForm: FormGroup;
-
-  constructor(private router: Router, private authService: AuthService) {
-    //this.loginForm = this.createFormGroup();
-   }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
-/*
-
-  createFormGroup() {
-    return new FormGroup({
-      email: new FormControl(''),
-      clave: new FormControl('')
-    });
-  }*/
-
+  
   onFocus(event) {
     let parent = event.srcElement.parentNode.parentNode;
 
@@ -79,7 +65,6 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar() {
-    this.router.navigate(['/app/home']);
+    this.router.navigate(['/home']);
   }
-  //prueba
 }

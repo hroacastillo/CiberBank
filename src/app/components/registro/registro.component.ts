@@ -1,32 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import { FormControl, FormGroup } from '@angular/forms';
-import { AuthService } from 'src/app/services/auth.service';
-
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegistroComponent implements OnInit {
 
-  //loginForm: FormGroup;
-
-  constructor(private router: Router, private authService: AuthService) {
-    //this.loginForm = this.createFormGroup();
-   }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-/*
-
-  createFormGroup() {
-    return new FormGroup({
-      email: new FormControl(''),
-      clave: new FormControl('')
-    });
-  }*/
 
   onFocus(event) {
     let parent = event.srcElement.parentNode.parentNode;
@@ -77,9 +62,8 @@ export class LoginComponent implements OnInit {
       pwd.setAttribute('type','text');
     }
   }
-
-  ingresar() {
+  
+  registrar() {
     this.router.navigate(['/app/home']);
   }
-  //prueba
 }

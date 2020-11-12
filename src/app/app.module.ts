@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 
 import { AppComponent } from './app.component';
@@ -12,6 +11,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ChatbotComponent } from './components/shared/chatbot/chatbot.component';
 import { ConfigComponent } from './components/config/config.component';
 import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { TransferComponent } from './components/transfer/transfer.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,16 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     ChatbotComponent,
     ConfigComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    RegistroComponent,
+    LoginPageComponent,
+    TransferComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    HttpClientModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

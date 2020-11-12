@@ -1,0 +1,93 @@
+:host {
+    width: calc(100vw - var(--nav-width));
+    float: right;
+    height: 100vh;
+    padding: 1rem 2rem;
+    transition: .5s;
+}
+
+.transfer-container {
+    height: calc(100% - 3.5rem);
+    width: 50%;
+    border-right: 3px solid var(--colorGris);
+}
+
+.cabecera {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    /*background-color: aquamarine;*/
+}
+
+.hist_title {
+    height: 100%;
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorAzul);
+    border-bottom: 4px solid var(--colorAzul);
+    cursor: pointer;
+}
+
+.action {
+    height: 80%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: var(--colorPlaceholder);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.action:hover {
+    color: var(--colorAzul);
+}
+
+.trans_hist {
+    padding: 0 1rem;
+    margin-top: .5rem;
+}
+
+.trans_hist_date {
+    color: var(--colorPlaceholder);
+    font-size: .8rem;
+}
+
+.transac {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1rem 0;
+    margin: 5px 0;
+    border-top: 1px solid var(--colorGris);
+}
+
+.transac_icon {
+    font-size: 1.8rem;
+    padding-right: 1rem;
+}
+
+.transac_detail {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.transac_detail_date {
+    color: var(--colorGris);
+}
+
+.transac_monto {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    color: var(--colorAzul);
+}

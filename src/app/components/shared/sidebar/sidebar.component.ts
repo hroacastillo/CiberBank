@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,15 +7,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  
+  expandNav: boolean = false;
+  
+  @Output() navFlag:EventEmitter<boolean>;
 
   userName: string = "Hector Roa Castillo ASDASD";
 
   userEmail: string = "hroa.castillo@gmail.com";
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    this.navFlag = new EventEmitter();
+  }
 
   ngOnInit(): void {
-    console.log(document.querySelector('#nav-toggle'));
+    //console.log(document.querySelector('#nav-toggle'));
   }
 
   mostrarMenu = () => {
@@ -25,7 +31,16 @@ export class SidebarComponent implements OnInit {
     
     toggle.classList.toggle('rotate');
     nav.parentElement.classList.toggle('show');
+    
+    if(nav.parentElement.classList.contains('show')) {
+      this.expandNav = true;
+    } else {
+      this.expandNav = false;
+    }
+
     body.classList.toggle('expander');
+
+    this.navFlag.emit( this.expandNav );
   }
 
   logout() {

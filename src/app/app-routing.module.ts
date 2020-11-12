@@ -3,13 +3,32 @@ import { Routes, RouterModule } from '@angular/router';
 import { ConfigComponent } from './components/config/config.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { TransferComponent } from './components/transfer/transfer.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'config', component: ConfigComponent },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  { 
+    path: '', 
+    component: LoginPageComponent,
+    children: [
+      { path: '', component: LoginComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'registro', component: RegistroComponent },
+    ]
+  },
+  { 
+    path: 'app', 
+    component: DashboardComponent,
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'transfer', component: TransferComponent },
+      { path: 'config', component: ConfigComponent }
+    ]
+  },
+  { path: '**', pathMatch: 'full', redirectTo: '/login' }
 ];
 
 @NgModule({

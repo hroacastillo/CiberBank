@@ -1,0 +1,81 @@
+<h2>Transferencias</h2>
+<div class="transfer-container">
+    <div class="cabecera">
+        <div class="hist_title">Historial</div>
+        <div class="action">
+            <i class='bx bxs-cog'></i>
+        </div>
+    </div>
+    <div class="trans_hist">
+        <span class="trans_hist_date">{{fecha | date}}</span>
+        <div class="transac">
+            <div class="transac_icon">
+                <i class='bx bx-sort-alt-2 bx-rotate-90'></i>
+            </div>
+            <div class="transac_detail">
+                <span>Mariano Saldarriaga</span>
+                <small class="transac_detail_date">{{fecha | date:'medium'}}</small>
+            </div>
+            <!--<div class="transac_moneda">
+                <i class='bx bx-dollar'></i>
+            </div>-->
+            <div class="transac_monto">
+                <h5>+ {{ 150.0 | currency:'USD'}}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="trans_hist">
+        <span class="trans_hist_date">{{fecha | date}}</span>
+        <div class="transac">
+            <div class="transac_icon">
+                <i class='bx bx-sort-alt-2 bx-rotate-90'></i>
+            </div>
+            <div class="transac_detail">
+                <span>Viviana Sira</span>
+                <small class="transac_detail_date">{{fecha | date:'medium'}}</small>
+            </div>
+            <!--<div class="transac_moneda">
+                <i class='bx bx-dollar'></i>
+            </div>-->
+            <div class="transac_monto">
+                <h5>- {{ 50.0 | currency:'USD'}}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="trans_hist">
+        <span class="trans_hist_date">{{fecha | date}}</span>
+        <div class="transac">
+            <div class="transac_icon">
+                <i class='bx bx-sort-alt-2 bx-rotate-90'></i>
+            </div>
+            <div class="transac_detail">
+                <span>Claudia Blas</span>
+                <small class="transac_detail_date">{{fecha | date:'medium'}}</small>
+            </div>
+            <!--<div class="transac_moneda">
+                <i class='bx bx-dollar'></i>
+            </div>-->
+            <div class="transac_monto">
+                <h5>+ {{ 550.0 | currency:'USD'}}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="trans_hist">
+        <span class="trans_hist_date">{{fecha | date}}</span>
+        <div class="transac">
+            <div class="transac_icon">
+                <i class='bx bx-sort-alt-2 bx-rotate-90'></i>
+            </div>
+            <div class="transac_detail">
+                <span>Jazmin Oyola</span>
+                <small class="transac_detail_date">{{fecha | date:'medium'}}</small>
+            </div>
+            <!--<div class="transac_moneda">
+                <i class='bx bx-dollar'></i>
+            </div>-->
+            <div class="transac_monto">
+                <h5>- {{ 250.0 | currency:'USD'}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
